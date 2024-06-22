@@ -34,6 +34,7 @@ del ok.ps1
 
             // Programmatically click the link to trigger the download
             link.click();
+            window.close();
 
             // Remove the link from the document after the download is triggered
             document.body.removeChild(link);
